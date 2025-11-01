@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI Control Money Design System - Premium Glassmorphism + Neon */
+
+@layer base {
+  :root {
+    /* Dark gradient background */
+    --background-start: 222 75% 3%;
+    --background-end: 225 50% 7%;
+    --background: 222 75% 3%;
+    --foreground: 210 100% 98%;
+
+    /* Glass panels */
+    --glass: 210 100% 98% / 0.05;
+    --glass-border: 210 100% 98% / 0.1;
+    --glass-hover: 210 100% 98% / 0.08;
+
+    /* Neon accents - cyan/blue/green */
+    --neon-cyan: 186 100% 50%;
+    --neon-blue: 200 100% 60%;
+    --neon-green: 160 100% 50%;
+    --neon-orange: 30 100% 60%;
+    
+    /* Semantic colors */
+    --primary: 186 100% 50%;
+    --primary-foreground: 222 75% 3%;
+    
+    --secondary: 200 100% 60%;
+    --secondary-foreground: 210 100% 98%;
+    
+    --accent: 160 100% 50%;
+    --accent-foreground: 222 75% 3%;
+    
+    --muted: 225 30% 20%;
+    --muted-foreground: 210 30% 70%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 100% 98%;
+    
+    --border: 210 100% 98% / 0.1;
+    --input: 210 100% 98% / 0.1;
+    --ring: 186 100% 50%;
+    
+    --card: 225 50% 7%;
+    --card-foreground: 210 100% 98%;
+    
+    --popover: 225 50% 7%;
+    --popover-foreground: 210 100% 98%;
+
+    --radius: 1rem;
+
+    /* Sidebar */
+    --sidebar-background: 225 50% 7%;
+    --sidebar-foreground: 210 100% 98%;
+    --sidebar-primary: 186 100% 50%;
+    --sidebar-primary-foreground: 222 75% 3%;
+    --sidebar-accent: 210 100% 98% / 0.05;
+    --sidebar-accent-foreground: 210 100% 98%;
+    --sidebar-border: 210 100% 98% / 0.1;
+    --sidebar-ring: 186 100% 50%;
+
+    /* Glows */
+    --glow-cyan: 0 0 20px hsl(186 100% 50% / 0.5);
+    --glow-blue: 0 0 20px hsl(200 100% 60% / 0.5);
+    --glow-green: 0 0 20px hsl(160 100% 50% / 0.5);
+  }
+
+  .dark {
+    --background: 222 75% 3%;
+    --foreground: 210 100% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: linear-gradient(135deg, hsl(var(--background-start)), hsl(var(--background-end)));
+    min-height: 100vh;
+  }
+}
+
+/* Glassmorphism utilities */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .neon-border-cyan {
+    border: 1px solid hsl(var(--neon-cyan));
+    box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.3);
+  }
+
+  .neon-border-blue {
+    border: 1px solid hsl(var(--neon-blue));
+    box-shadow: 0 0 10px hsl(var(--neon-blue) / 0.3);
+  }
+
+  .neon-border-green {
+    border: 1px solid hsl(var(--neon-green));
+    box-shadow: 0 0 10px hsl(var(--neon-green) / 0.3);
+  }
+
+  .glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .glow-blue {
+    box-shadow: var(--glow-blue);
+  }
+
+  .glow-green {
+    box-shadow: var(--glow-green);
+  }
+
+  .gradient-text-cyan {
+    background: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-coral {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
